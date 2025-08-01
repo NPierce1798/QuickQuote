@@ -8,7 +8,7 @@ const Header = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
             <Link href="/" className="text-white">
-            <h1 className="text-2xl font-bold">QuickHVAC</h1>
+            <h1 className="text-2xl font-bold">ServiceElite</h1>
             <p className="text-blue-200 text-sm">Licensed Contractor Network</p>
             </Link>
             
@@ -35,7 +35,7 @@ const Header = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
             <div>
-            <h3 className="text-xl font-bold mb-4">QuickHVAC</h3>
+            <h3 className="text-xl font-bold mb-4">ServiceElite</h3>
             <p className="text-gray-400">
                 Connecting homeowners with licensed HVAC contractors for emergency repairs and installations.
             </p>
@@ -56,7 +56,7 @@ const Header = () => (
             </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 QuickHVAC. All rights reserved.</p>
+            <p>&copy; 2024 ServiceElite. All rights reserved.</p>
         </div>
         </div>
     </footer>
@@ -76,14 +76,14 @@ const Header = () => (
                 <section>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">1. Acceptance of Terms</h2>
                 <div className="space-y-4 text-gray-600">
-                    <p>By accessing and using QuickHVAC's website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+                    <p>By accessing and using ServiceElite's website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
                 </div>
                 </section>
 
                 <section>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">2. Service Description</h2>
                 <div className="space-y-4 text-gray-600">
-                    <p>QuickHVAC is a referral service that connects homeowners with licensed HVAC contractors. We:</p>
+                    <p>ServiceElite is a referral service that connects homeowners with licensed HVAC contractors. We:</p>
                     <ul className="list-disc pl-6 space-y-2">
                     <li>Facilitate connections between homeowners and HVAC professionals</li>
                     <li>Do not provide HVAC services directly</li>
@@ -112,7 +112,7 @@ const Header = () => (
                 <div className="space-y-4 text-gray-600">
                     <p>Important disclaimers about contractors:</p>
                     <ul className="list-disc pl-6 space-y-2">
-                    <li>All contractors are independent businesses, not employees of QuickHVAC</li>
+                    <li>All contractors are independent businesses, not employees of ServiceElite</li>
                     <li>We pre-screen contractors for licensing and insurance but do not guarantee their work</li>
                     <li>All contracts for HVAC services are directly between you and the contractor</li>
                     <li>We are not responsible for contractor performance, pricing, or service quality</li>
@@ -137,7 +137,7 @@ const Header = () => (
                 <section>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">6. Limitation of Liability</h2>
                 <div className="space-y-4 text-gray-600">
-                    <p>QuickHVAC shall not be liable for:</p>
+                    <p>ServiceElite shall not be liable for:</p>
                     <ul className="list-disc pl-6 space-y-2">
                     <li>Any damages arising from contractor services or work performed</li>
                     <li>Property damage caused by contractors</li>
@@ -152,7 +152,7 @@ const Header = () => (
                 <section>
                 <h2 className="text-xl font-semibold text-gray-800 mb-4">7. Indemnification</h2>
                 <div className="space-y-4 text-gray-600">
-                    <p>You agree to indemnify and hold QuickHVAC harmless from any claims, damages, or expenses arising from:</p>
+                    <p>You agree to indemnify and hold ServiceElite harmless from any claims, damages, or expenses arising from:</p>
                     <ul className="list-disc pl-6 space-y-2">
                     <li>Your use of our service</li>
                     <li>Your interactions with contractors</li>
@@ -195,7 +195,7 @@ const Header = () => (
                 <div className="space-y-4 text-gray-600">
                     <p>If you have any questions about these Terms of Service, please contact us:</p>
                     <ul className="list-none space-y-2">
-                    <li>Email: <a href="mailto:legal@quickhvac.com" className="text-blue-600 hover:text-blue-800">legal@quickhvac.com</a></li>
+                    <li>Email: <a href="mailto:legal@ServiceElite.com" className="text-blue-600 hover:text-blue-800">legal@ServiceElite.com</a></li>
                     <li>Address: [Your Business Address]</li>
                     </ul>
                 </div>

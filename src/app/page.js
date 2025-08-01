@@ -9,7 +9,7 @@ const Header = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center py-4">
         <Link href="/" className="text-white">
-          <h1 className="text-2xl font-bold">QuickHVAC</h1>
+          <h1 className="text-2xl font-bold">ServiceElite</h1>
           <p className="text-blue-200 text-sm">Licensed Contractor Network</p>
         </Link>
         
@@ -36,7 +36,7 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-3 gap-8">
         <div>
-          <h3 className="text-xl font-bold mb-4">QuickHVAC</h3>
+          <h3 className="text-xl font-bold mb-4">ServiceElite</h3>
           <p className="text-gray-400">
             Connecting homeowners with licensed HVAC contractors for emergency repairs and installations.
           </p>
@@ -57,7 +57,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2024 QuickHVAC. All rights reserved.</p>
+        <p>&copy; 2024 ServiceElite. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -122,6 +122,11 @@ export default function HomePage() {
   }
 };
 
+  const handleBackToHome = () => {
+    setIsSubmitted(false);
+    setConfirmedContractors(0); // Reset contractors count to 0
+  };
+
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center px-4">
@@ -152,7 +157,7 @@ export default function HomePage() {
           </div>
 
           <button
-            onClick={() => setIsSubmitted(false)}
+            onClick={handleBackToHome}
             className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             ← Back to Home

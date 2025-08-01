@@ -103,7 +103,7 @@ export async function POST(request) {
 
         // Send email to contractor
         const emailResult = await resend.emails.send({
-          from: 'QuickHVAC <onboarding@resend.dev>',
+          from: 'ServiceElite <onboarding@resend.dev>',
           to: [contractor.email],
           subject: `🔥 NEW HVAC LEAD - ${city}, ${state}`,
           html: `
@@ -132,7 +132,7 @@ export async function POST(request) {
 
               <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
               <p style="color: #666; font-size: 12px;">
-                QuickHVAC - Licensed Contractor Network<br>
+                ServiceElite - Licensed Contractor Network<br>
                 Questions? Reply to this email.
               </p>
             </div>
@@ -152,7 +152,7 @@ export async function POST(request) {
     // 4. Send notification email to you
     try {
       await resend.emails.send({
-        from: 'QuickHVAC <onboarding@resend.dev>',
+        from: 'ServiceElite <onboarding@resend.dev>',
         to: ['npierce1798@gmail.com'],
         subject: `New HVAC Lead Submitted - ${city}, ${state}`,
         html: `

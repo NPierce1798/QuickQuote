@@ -8,7 +8,7 @@ const Header = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
             <Link href="/" className="text-white">
-            <h1 className="text-2xl font-bold">QuickHVAC</h1>
+            <h1 className="text-2xl font-bold">ServiceElite</h1>
             <p className="text-blue-200 text-sm">Licensed Contractor Network</p>
             </Link>
             
@@ -35,7 +35,7 @@ const Header = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
             <div>
-            <h3 className="text-xl font-bold mb-4">QuickHVAC</h3>
+            <h3 className="text-xl font-bold mb-4">ServiceElite</h3>
             <p className="text-gray-400">
                 Connecting homeowners with licensed HVAC contractors for emergency repairs and installations.
             </p>
@@ -56,7 +56,7 @@ const Header = () => (
             </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 QuickHVAC. All rights reserved.</p>
+            <p>&copy; 2024 ServiceElite. All rights reserved.</p>
         </div>
         </div>
     </footer>
@@ -71,7 +71,7 @@ const Header = () => (
             {/* Hero Section */}
             <div className="text-center mb-12">
             <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                About QuickHVAC
+                About ServiceElite
             </h1>
             <p className="text-xl text-blue-200">
                 Connecting homeowners with trusted HVAC professionals when you need help most
@@ -84,7 +84,7 @@ const Header = () => (
                 <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">Our Mission</h2>
                 <p className="text-gray-600 text-lg leading-relaxed">
-                    When your heating or cooling system breaks down, you need help fast. QuickHVAC was created to solve the frustrating problem of finding reliable HVAC contractors quickly. We connect homeowners with pre-screened, licensed professionals who can respond to your emergency within minutes, not hours.
+                    When your heating or cooling system breaks down, you need help fast. ServiceElite was created to solve the frustrating problem of finding reliable HVAC contractors quickly. We connect homeowners with pre-screened, licensed professionals who can respond to your emergency within minutes, not hours.
                 </p>
                 </div>
 
@@ -116,7 +116,7 @@ const Header = () => (
                 </div>
 
                 <div>
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Choose QuickHVAC?</h2>
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">Why Choose ServiceElite?</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                     <div className="flex items-start">
                     <Shield className="w-6 h-6 text-blue-600 mr-3 mt-1" />

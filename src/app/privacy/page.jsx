@@ -8,7 +8,7 @@ const Header = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
             <Link href="/" className="text-white">
-            <h1 className="text-2xl font-bold">QuickHVAC</h1>
+            <h1 className="text-2xl font-bold">ServiceElite</h1>
             <p className="text-blue-200 text-sm">Licensed Contractor Network</p>
             </Link>
             
@@ -35,7 +35,7 @@ const Header = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
             <div>
-            <h3 className="text-xl font-bold mb-4">QuickHVAC</h3>
+            <h3 className="text-xl font-bold mb-4">ServiceElite</h3>
             <p className="text-gray-400">
                 Connecting homeowners with licensed HVAC contractors for emergency repairs and installations.
             </p>
@@ -56,7 +56,7 @@ const Header = () => (
             </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 QuickHVAC. All rights reserved.</p>
+            <p>&copy; 2024 ServiceElite. All rights reserved.</p>
         </div>
         </div>
     </footer>
@@ -136,7 +136,7 @@ const Header = () => (
                     <li>Request deletion of your personal information</li>
                     <li>Opt out of non-essential communications</li>
                     </ul>
-                    <p>To exercise these rights, contact us at <a href="mailto:privacy@quickhvac.com" className="text-blue-600 hover:text-blue-800">privacy@quickhvac.com</a></p>
+                    <p>To exercise these rights, contact us at <a href="mailto:privacy@ServiceElite.com" className="text-blue-600 hover:text-blue-800">privacy@ServiceElite.com</a></p>
                 </div>
                 </section>
 
@@ -166,7 +166,7 @@ const Header = () => (
                 <div className="space-y-4 text-gray-600">
                     <p>If you have questions about this privacy policy, please contact us:</p>
                     <ul className="list-none space-y-2">
-                    <li>Email: <a href="mailto:privacy@quickhvac.com" className="text-blue-600 hover:text-blue-800">privacy@quickhvac.com</a></li>
+                    <li>Email: <a href="mailto:privacy@ServiceElite.com" className="text-blue-600 hover:text-blue-800">privacy@ServiceElite.com</a></li>
                     <li>Address: [Your Business Address]</li>
                     </ul>
                 </div>

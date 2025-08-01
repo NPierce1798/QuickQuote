@@ -8,7 +8,7 @@ const Header = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
             <Link href="/" className="text-white">
-            <h1 className="text-2xl font-bold">QuickHVAC</h1>
+            <h1 className="text-2xl font-bold">ServiceElite</h1>
             <p className="text-blue-200 text-sm">Licensed Contractor Network</p>
             </Link>
             
@@ -35,7 +35,7 @@ const Header = () => (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
             <div>
-            <h3 className="text-xl font-bold mb-4">QuickHVAC</h3>
+            <h3 className="text-xl font-bold mb-4">ServiceElite</h3>
             <p className="text-gray-400">
                 Connecting homeowners with licensed HVAC contractors for emergency repairs and installations.
             </p>
@@ -56,7 +56,7 @@ const Header = () => (
             </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 QuickHVAC. All rights reserved.</p>
+            <p>&copy; 2024 ServiceElite. All rights reserved.</p>
         </div>
         </div>
     </footer>
@@ -104,10 +104,10 @@ const Header = () => (
                     <h3 className="font-semibold text-gray-800 mb-1">General Questions</h3>
                     <p className="text-gray-600 mb-2">For general inquiries and support</p>
                     <a 
-                        href="mailto:support@quickhvac.com"
+                        href="mailto:support@ServiceElite.com"
                         className="text-blue-600 hover:text-blue-800 font-medium"
                     >
-                        support@quickhvac.com
+                        support@ServiceElite.com
                     </a>
                     </div>
                 </div>
@@ -118,10 +118,10 @@ const Header = () => (
                     <h3 className="font-semibold text-gray-800 mb-1">Contractors</h3>
                     <p className="text-gray-600 mb-2">Interested in joining our network?</p>
                     <a 
-                        href="mailto:contractors@quickhvac.com"
+                        href="mailto:contractors@ServiceElite.com"
                         className="text-blue-600 hover:text-blue-800 font-medium"
                     >
-                        contractors@quickhvac.com
+                        contractors@ServiceElite.com
                     </a>
                     </div>
                 </div>
