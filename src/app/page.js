@@ -85,29 +85,9 @@ export default function HomePage() {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  
-  try {
-    console.log('Submitting form data:', formData);
-    
-    const response = await fetch('/api/leads', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
-
-    console.log('Response status:', response.status);
-    
-    if (!response.ok) {
-      const errorData = await response.json();
-      console.error('API Error:', errorData);
-      throw new Error(`Failed to submit lead: ${errorData.error || response.statusText}`);
-    }
-
-    const result = await response.json();
-    console.log('Success result:', result);
+    e.preventDefault();
+    // TODO: Add your API call here
+    console.log('Form submitted:', formData);
     
     setIsSubmitted(true);
     
@@ -115,16 +95,6 @@ export default function HomePage() {
     setTimeout(() => setConfirmedContractors(1), 2000);
     setTimeout(() => setConfirmedContractors(2), 4000);
     setTimeout(() => setConfirmedContractors(3), 6000);
-    
-  } catch (error) {
-    console.error('Form submission error:', error);
-    alert('Error submitting form: ' + error.message);
-  }
-};
-
-  const handleBackToHome = () => {
-    setIsSubmitted(false);
-    setConfirmedContractors(0); // Reset contractors count to 0
   };
 
   if (isSubmitted) {
@@ -157,7 +127,7 @@ export default function HomePage() {
           </div>
 
           <button
-            onClick={handleBackToHome}
+            onClick={() => setIsSubmitted(false)}
             className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             ← Back to Home
@@ -171,6 +141,30 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">
       <Header />
 
+      {/* Trust Banner */}
+      <div className="bg-white/5 backdrop-blur-sm border-b border-white/10 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-white">
+            <div className="flex flex-col items-center">
+              <div className="text-lg md:text-xl font-bold text-yellow-300">15 min</div>
+              <div className="text-xs md:text-sm text-blue-200">Average Response</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-lg md:text-xl font-bold text-yellow-300">100%</div>
+              <div className="text-xs md:text-sm text-blue-200">Licensed & Insured</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-lg md:text-xl font-bold text-yellow-300">Free</div>
+              <div className="text-xs md:text-sm text-blue-200">No Hidden Fees</div>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="text-lg md:text-xl font-bold text-yellow-300">24/7</div>
+              <div className="text-xs md:text-sm text-blue-200">Emergency Service</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
@@ -181,6 +175,7 @@ export default function HomePage() {
               <span className="block text-yellow-300">Get 3 Free Quotes</span>
               <span className="block text-2xl lg:text-3xl">in 30 Minutes</span>
             </h2>
+            <p className='text-md mb-6'>We send your info to <span className='text-yellow-300 font-bold'>3 contractors in your area</span>, they <span className='text-yellow-300 font-bold'>call you with quotes</span>, you <span className='text-yellow-300 font-bold'>pick the best one</span>, no commitment</p>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-center">
@@ -211,7 +206,7 @@ export default function HomePage() {
           </div>
 
           {/* Right Column - Lead Form */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8">
+          <div id="form" className="bg-white rounded-2xl shadow-2xl p-8">
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">Get Help in 15 Minutes</h3>
               <p className="text-gray-600">Quick address details help us find the right contractors</p>
@@ -358,6 +353,123 @@ export default function HomePage() {
                 Licensed contractors will call you within 15 minutes. No commitment required.
               </p>
             </form>
+          </div>
+        </div>
+      </div>
+
+      {/* How It Works Section */}
+      <div className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">How ServiceElite Works</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Skip the hassle of calling multiple contractors. Get connected with qualified professionals instantly.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center">
+              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Submit Your Request</h3>
+              <p className="text-gray-600">
+                Fill out our simple form with your contact info, address, and problem description. Takes under 2 minutes.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Get Multiple Calls</h3>
+              <p className="text-gray-600">
+                Up to 3 licensed contractors in your area will call you within 15 minutes with quotes and availability.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-blue-600">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-800 mb-3">Choose & Schedule</h3>
+              <p className="text-gray-600">
+                Compare quotes, availability, and reviews. Choose the contractor that best fits your needs and budget.
+              </p>
+            </div>
+          </div>
+
+          {/* Benefits Section */}
+          <div className="bg-gray-50 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold text-gray-800 text-center mb-8">Why ServiceElite vs. Other Options?</h3>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
+                  ServiceElite Advantages
+                </h4>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-2">✓</span>
+                    <span><strong>Completely free</strong> - no hidden fees or charges</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-2">✓</span>
+                    <span><strong>Pre-screened contractors</strong> - licensed & insured only</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-2">✓</span>
+                    <span><strong>Fast response</strong> - calls within 15 minutes</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-2">✓</span>
+                    <span><strong>Multiple quotes</strong> - compare prices instantly</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-2">✓</span>
+                    <span><strong>No obligation</strong> - you choose or walk away</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                  <span className="text-red-500 mr-2">⚠️</span>
+                  Other Methods
+                </h4>
+                <ul className="space-y-3 text-gray-600">
+                  <li className="flex items-start">
+                    <span className="text-red-500 mr-2">✗</span>
+                    <span><strong>Calling contractors directly:</strong> Time consuming, many don't answer</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-red-500 mr-2">✗</span>
+                    <span><strong>HomeAdvisor/Angie's List:</strong> Pay membership fees, mixed quality</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-red-500 mr-2">✗</span>
+                    <span><strong>Google searching:</strong> Hard to verify credentials, hit or miss</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-red-500 mr-2">✗</span>
+                    <span><strong>Emergency services:</strong> Often overpriced, limited options</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-lg text-gray-700 mb-4">
+                <strong>Bottom line:</strong> Get multiple qualified contractors competing for your business in minutes, not hours.
+              </p>
+              <a 
+                href="#form" 
+                className="inline-block bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold py-3 px-8 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              >
+                Get Started Now - It's Free
+              </a>
+            </div>
           </div>
         </div>
       </div>
