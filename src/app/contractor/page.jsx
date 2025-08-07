@@ -42,8 +42,9 @@ export default function ContractorPage() {
     contactName: '',
     phone: '',
     email: '',
-    serviceAreas: '',
-    specialties: ''
+    serviceCity: '',
+    serviceState: '',
+    serviceRadius: '25'
   });
 
   const handleInputChange = (e) => {
@@ -285,7 +286,7 @@ export default function ContractorPage() {
             
             <div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">What areas do you serve?</h3>
-              <p className="text-gray-600">Currently launching in Phoenix metro area. Expanding to other major cities soon.</p>
+              <p className="text-gray-600">Currently launching in Phoenix metro area. You set your service radius (10-50 miles) from your city center. We automatically match you with customers in your coverage area.</p>
             </div>
           </div>
         </div>
@@ -354,28 +355,64 @@ export default function ContractorPage() {
               </div>
 
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-2">Service Areas (ZIP codes) *</label>
-                <input
-                  type="text"
-                  name="serviceAreas"
-                  required
-                  value={contactForm.serviceAreas}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800"
-                  placeholder="85001, 85002, 85003, etc."
-                />
-              </div>
-
-              <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-2">Specialties</label>
-                <input
-                  type="text"
-                  name="specialties"
-                  value={contactForm.specialties}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800"
-                  placeholder="AC repair, heating, installation, maintenance"
-                />
+                <label className="block text-sm font-medium text-gray-700 mb-2">Service Area *</label>
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <input
+                      type="text"
+                      name="serviceCity"
+                      required
+                      value={contactForm.serviceCity}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800"
+                      placeholder="Phoenix"
+                    />
+                    <label className="text-xs text-gray-500 mt-1">City</label>
+                  </div>
+                  <div>
+                    <select
+                      name="serviceState"
+                      required
+                      value={contactForm.serviceState}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800"
+                    >
+                      <option value="">State</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="TX">Texas</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="FL">Florida</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="GA">Georgia</option>
+                      <option value="NV">Nevada</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="SC">South Carolina</option>
+                    </select>
+                    <label className="text-xs text-gray-500 mt-1">State</label>
+                  </div>
+                  <div>
+                    <select
+                      name="serviceRadius"
+                      required
+                      value={contactForm.serviceRadius}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-800"
+                    >
+                      <option value="10">10 miles</option>
+                      <option value="15">15 miles</option>
+                      <option value="20">20 miles</option>
+                      <option value="25">25 miles</option>
+                      <option value="30">30 miles</option>
+                      <option value="40">40 miles</option>
+                      <option value="50">50 miles</option>
+                    </select>
+                    <label className="text-xs text-gray-500 mt-1">Radius</label>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-500 mt-2">
+                  Example: "Phoenix, AZ within 25 miles" covers Scottsdale, Tempe, Mesa, Glendale, etc.
+                </p>
               </div>
 
               <div className="md:col-span-2 text-center">
