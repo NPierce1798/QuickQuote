@@ -37,6 +37,8 @@ const Footer = () => (
 );
 
 export default function ContractorPage() {
+  console.log('ContractorPage is rendering!');
+  
   const [contactForm, setContactForm] = useState({
     businessName: '',
     contactName: '',
@@ -54,15 +56,50 @@ export default function ContractorPage() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Handle contractor signup
-    console.log('Contractor signup:', contactForm);
-    alert('Thanks! We\'ll contact you within 24 hours to get you set up.');
+    
+    try {
+      console.log('Submitting contractor signup:', contactForm);
+      
+      const response = await fetch('/api/contractors', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactForm),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(`Failed to submit application: ${errorData.error || response.statusText}`);
+      }
+
+      const result = await response.json();
+      console.log('Contractor signup successful:', result);
+      
+      // Reset form
+      setContactForm({
+        businessName: '',
+        contactName: '',
+        phone: '',
+        email: '',
+        serviceCity: '',
+        serviceState: '',
+        serviceRadius: '25'
+      });
+      
+      alert('Thanks! We\'ll contact you within 24 hours to get you set up and start sending leads.');
+      
+    } catch (error) {
+      console.error('Contractor signup error:', error);
+      alert('Error submitting application: ' + error.message + '. Please try again.');
+    }
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <h1 style={{color: 'red', fontSize: '50px'}}>CONTRACTOR PAGE TEST</h1>
       <Header />
 
       {/* Hero Section */}
