@@ -85,6 +85,11 @@ export default function HomePage() {
   };
 
   const handleSubmit = async (e) => {
+    const valueMissing = Object.values(formData).every(value => value == '');
+    if (valueMissing) {
+      console.log("! Missing value in form !")
+      return
+    }
     e.preventDefault();
     // TODO: Add your API call here
     console.log('Form submitted:', formData);
